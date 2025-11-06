@@ -17,15 +17,21 @@ class _RegistroPadrePageState extends State<RegistroPadrePage> {
   final TextEditingController _telefonoController = TextEditingController();
   final TextEditingController _correoController = TextEditingController();
   final TextEditingController _contrasenaController = TextEditingController();
+<<<<<<< HEAD
   final TextEditingController _ciudadController = TextEditingController();
 
   // Variables para selectores
+=======
+
+  // Variables para los selectores
+>>>>>>> ad56655cb9048a25f98269de8a951e102c9dc224
   String? _sexoSeleccionado;
   String? _estadoCivilSeleccionado;
   bool _recibeBono = false;
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     final screenWidth = MediaQuery.of(context).size.width;
     final isWide = screenWidth > 600; // ancho mínimo para 2 columnas
 
@@ -43,6 +49,8 @@ class _RegistroPadrePageState extends State<RegistroPadrePage> {
             );
     }
 
+=======
+>>>>>>> ad56655cb9048a25f98269de8a951e102c9dc224
     return Scaffold(
       appBar: AppBar(
         title: const Text('Registro de Padres'),
@@ -62,6 +70,7 @@ class _RegistroPadrePageState extends State<RegistroPadrePage> {
               ),
               const SizedBox(height: 20),
 
+<<<<<<< HEAD
               // FILA 1: Apellidos - Nombres
               buildRowOrColumn([
                 TextFormField(
@@ -200,6 +209,135 @@ class _RegistroPadrePageState extends State<RegistroPadrePage> {
                 ),
                 validator: (value) =>
                     value!.isEmpty ? 'Ingrese su ciudad' : null,
+=======
+              // Nombres
+              TextFormField(
+                controller: _nombresController,
+                decoration: const InputDecoration(
+                  labelText: 'Nombres',
+                  border: OutlineInputBorder(),
+                ),
+                validator: (value) =>
+                    value!.isEmpty ? 'Ingrese sus nombres' : null,
+              ),
+              const SizedBox(height: 16),
+
+              // Apellidos
+              TextFormField(
+                controller: _apellidosController,
+                decoration: const InputDecoration(
+                  labelText: 'Apellidos',
+                  border: OutlineInputBorder(),
+                ),
+                validator: (value) =>
+                    value!.isEmpty ? 'Ingrese sus apellidos' : null,
+              ),
+              const SizedBox(height: 16),
+
+              // Cédula
+              TextFormField(
+                controller: _cedulaController,
+                keyboardType: TextInputType.number,
+                decoration: const InputDecoration(
+                  labelText: 'Cédula',
+                  border: OutlineInputBorder(),
+                ),
+                validator: (value) =>
+                    value!.isEmpty ? 'Ingrese su cédula' : null,
+              ),
+              const SizedBox(height: 16),
+
+              // Teléfono
+              TextFormField(
+                controller: _telefonoController,
+                keyboardType: TextInputType.phone,
+                decoration: const InputDecoration(
+                  labelText: 'Teléfono',
+                  border: OutlineInputBorder(),
+                ),
+                validator: (value) =>
+                    value!.isEmpty ? 'Ingrese su teléfono' : null,
+              ),
+              const SizedBox(height: 16),
+
+              // Correo electrónico
+              TextFormField(
+                controller: _correoController,
+                keyboardType: TextInputType.emailAddress,
+                decoration: const InputDecoration(
+                  labelText: 'Correo electrónico',
+                  border: OutlineInputBorder(),
+                ),
+                validator: (value) =>
+                    value!.isEmpty ? 'Ingrese su correo electrónico' : null,
+              ),
+              const SizedBox(height: 16),
+
+              // Contraseña
+              TextFormField(
+                controller: _contrasenaController,
+                obscureText: true,
+                decoration: const InputDecoration(
+                  labelText: 'Contraseña',
+                  border: OutlineInputBorder(),
+                ),
+                validator: (value) =>
+                    value!.isEmpty ? 'Ingrese una contraseña' : null,
+              ),
+              const SizedBox(height: 16),
+
+              // Sexo
+              DropdownButtonFormField<String>(
+                value: _sexoSeleccionado,
+                decoration: const InputDecoration(
+                  labelText: 'Sexo',
+                  border: OutlineInputBorder(),
+                ),
+                items: const [
+                  DropdownMenuItem(
+                    value: 'Masculino',
+                    child: Text('Masculino'),
+                  ),
+                  DropdownMenuItem(value: 'Femenino', child: Text('Femenino')),
+                ],
+                onChanged: (value) {
+                  setState(() {
+                    _sexoSeleccionado = value;
+                  });
+                },
+                validator: (value) =>
+                    value == null ? 'Seleccione su sexo' : null,
+              ),
+              const SizedBox(height: 16),
+
+              // Estado civil
+              DropdownButtonFormField<String>(
+                value: _estadoCivilSeleccionado,
+                decoration: const InputDecoration(
+                  labelText: 'Estado Civil',
+                  border: OutlineInputBorder(),
+                ),
+                items: const [
+                  DropdownMenuItem(value: 'Soltero', child: Text('Soltero')),
+                  DropdownMenuItem(value: 'Casado', child: Text('Casado')),
+                  DropdownMenuItem(
+                    value: 'Divorciado',
+                    child: Text('Divorciado'),
+                  ),
+                  DropdownMenuItem(value: 'Viudo', child: Text('Viudo')),
+                  DropdownMenuItem(
+                    value: 'Unión libre',
+                    child: Text('Unión libre'),
+                  ),
+                ],
+                onChanged: (value) {
+                  setState(() {
+                    _estadoCivilSeleccionado = value;
+                  });
+                },
+                validator: (value) =>
+                    value == null ? 'Seleccione su estado civil' : null,
+>>>>>>> ad56655cb9048a25f98269de8a951e102c9dc224
               ),
               const SizedBox(height: 16),
 
