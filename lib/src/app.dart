@@ -104,9 +104,8 @@ class _HomepageState extends State<Homepage> {
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ),
-<<<<<<< HEAD
 
-                  // 🔹 Aquí añadimos el enlace de recuperación
+                  // 🔹 Enlace de recuperación
                   TextButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/recuperar');
@@ -121,8 +120,6 @@ class _HomepageState extends State<Homepage> {
                     ),
                   ),
 
-=======
->>>>>>> ad56655cb9048a25f98269de8a951e102c9dc224
                   SizedBox(height: screenHeight * 0.02),
 
                   // Registro

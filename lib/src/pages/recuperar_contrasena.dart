@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-<<<<<<< HEAD
 class RecuperarContrasenaPage extends StatefulWidget {
   const RecuperarContrasenaPage({super.key});
 
@@ -13,19 +12,12 @@ class _RecuperarContrasenaPageState extends State<RecuperarContrasenaPage> {
   final TextEditingController _emailController = TextEditingController();
 
   @override
-=======
-class RecuperarContrasenaPage extends StatelessWidget {
-  const RecuperarContrasenaPage({super.key});
-
-  @override
->>>>>>> ad56655cb9048a25f98269de8a951e102c9dc224
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Recuperar Contraseña"),
         backgroundColor: Colors.pinkAccent,
       ),
-<<<<<<< HEAD
       body: Padding(
         padding: const EdgeInsets.all(25),
         child: Column(
@@ -111,12 +103,6 @@ class RecuperarContrasenaPage extends StatelessWidget {
               ),
             ),
           ],
-=======
-      body: const Center(
-        child: Text(
-          "Pantalla para recuperar la contraseña.",
-          style: TextStyle(fontSize: 18),
->>>>>>> ad56655cb9048a25f98269de8a951e102c9dc224
         ),
       ),
     );
